@@ -10,21 +10,7 @@ import Navbar from './Navbar'
 function App() {
 
   const [page, setPage] = useState('home')
-  const [filmList, setFilmList] = useState([])
-
-  useEffect(()=>{
-    async function getFilms(){
-      const response = await fetch("https://hub.dummyapis.com/vj/wzGUkpZ")
-      const data = await response.json();
-      setFilmList(data)      
-    }
-    getFilms();
-  },[])
-  useEffect(() => {
-
-  }, [filmList])
-
-
+  const [filmList, setFilmList] = useState({watched:[], watchList:[]})
 
   function renderFilms(films){
     films.map((film) =>{
@@ -33,7 +19,7 @@ function App() {
   }
   function getPage(){
     if(page === "home"){
-      return <Home setPage={setPage}/>
+      return <Home setPage={setPage} setFilmList={setFilmList} filmList={filmList}/>
     } 
     else if(page ==="watched"){
       return <Watched />
@@ -47,7 +33,7 @@ function App() {
   }
   return (
     <body>
-      {page !=="home" && <Navbar setPage={setPage}/>}
+      <Navbar setPage={setPage}/>
       {getPage()}
     </body>
   );
