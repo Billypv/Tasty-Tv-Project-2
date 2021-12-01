@@ -3,7 +3,7 @@ function FilmRendered(props){
         props.setFilmList({watched:[...props.filmList.watched,{title:`${props.film.title}`, posterUrl:`http://image.tmdb.org/t/p/w500/${props.film.poster_path}`, overview:props.film.overview}], watchList:[...props.filmList.watchList]})
     }
     function watchListButton(){
-        props.setFilmList({watchList:[...props.filmList.watched,{title:`${props.film.title}`, posterUrl:`http://image.tmdb.org/t/p/w500/${props.film.poster_path}`, overview:props.film.overview}], watched:[...props.filmList.watchList]})
+        props.setFilmList({watchList:[...props.filmList.watched,{title:`${props.film.title}`, posterUrl:`http://image.tmdb.org/t/p/w500/${props.film.poster_path}`, overview:props.film.overview}], watched:[...props.filmList.watched]})
     }
     return(
         <div>
