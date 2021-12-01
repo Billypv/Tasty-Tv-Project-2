@@ -8,18 +8,26 @@ import Navbar from './Navbar'
 
 
 function App() {
+
   const [page, setPage] = useState('home')
   const [filmList, setFilmList] = useState([])
-  const [watched, setWatched] = useState([])
-  const [watchList, setWatchList] = useState([])
+
+  useEffect(()=>{
+    async function getFilms(){
+      const response = await fetch("https://hub.dummyapis.com/vj/wzGUkpZ")
+      const data = await response.json();
+      setFilmList(data)      
+    }
+    getFilms();
+  },[])
   useEffect(() => {
 
   }, [filmList])
 
 
 
-  function renderFilms(filmList){
-    filmList.map((film) =>{
+  function renderFilms(films){
+    films.map((film) =>{
 
     })
   }
