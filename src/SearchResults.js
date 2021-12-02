@@ -11,7 +11,6 @@ function SearchResults(props){
         }
         props.search.length && filmsFromAPI();
         
-        console.log(filmSearchResponse)
     },[props.search])
 
 

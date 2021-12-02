@@ -12,19 +12,14 @@ function App() {
   const [page, setPage] = useState('home')
   const [filmList, setFilmList] = useState({watched:[], watchList:[]})
 
-  function renderFilms(films){
-    films.map((film) =>{
-
-    })
-  }
   function getPage(){
     if(page === "home"){
       return <Home setPage={setPage} setFilmList={setFilmList} filmList={filmList}/>
     } 
     else if(page ==="watched"){
-      return <Watched />
+      return <Watched filmList={filmList}  setFilmList={setFilmList}/>
     } else if(page ==="watchlist"){
-      return <Watchlist />
+      return <Watchlist filmList={filmList}  setFilmList={setFilmList}/>
     } else if(page ==="reccomendations"){
       return <Reccomendations />
     } else if(page ==="logon"){
@@ -32,10 +27,10 @@ function App() {
     }
   }
   return (
-    <body>
+    <div>
       <Navbar setPage={setPage}/>
       {getPage()}
-    </body>
+    </div>
   );
 }
 
