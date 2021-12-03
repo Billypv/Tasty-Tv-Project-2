@@ -42,7 +42,9 @@ Rows.
 ## Unsolved Problems
 
 In future iterations of this project, I would personalise the reccomendations to give options based on the most watched genre or possibly 
-the most frequent genre on the watch list. I would also improve the styling.
+the most frequent genre on the watch list.
+
+I would also give users the ability to log on. I originally intended to add this feature however I did not due to time constraints.
 
 The largest change I would add, would be the option to load more pages of results from the search call to the api. I did not implement this for this project
 however as I do not think it would have showed greater understanding of the content.
