@@ -13,7 +13,7 @@ function SearchResults(props){
         props.search.length && filmsFromAPI();
         
     },[props.search])
-
+    
 
     return(
         <Container fluid >

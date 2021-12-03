@@ -2,7 +2,7 @@ import {useState} from 'react'
 import Home from './Home'
 import Watched from './Watched'
 import Watchlist from './Watchlist'
-import Reccomendations from './Reccomendations'
+import Recomendations from './Recomendations'
 import Navbar from './Navbar'
 import { Container } from 'react-bootstrap'
 
@@ -19,8 +19,8 @@ function App() {
       return <Watched filmList={filmList}  setFilmList={setFilmList}/>
     } else if(page ==="watchlist"){
       return <Watchlist filmList={filmList}  setFilmList={setFilmList}/>
-    } else if(page ==="reccomendations"){
-      return <Reccomendations setFilmList={setFilmList} filmList={filmList} page={page} />
+    } else if(page ==="recomendations"){
+      return <Recomendations setFilmList={setFilmList} filmList={filmList} page={page} />
     }
   }
   return (

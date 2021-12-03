@@ -5,7 +5,7 @@ function Navbar(props){
                 <Button onClick ={() => props.setPage("home")}>Home</Button>
                 <Button onClick ={() => props.setPage("watched")}>Watched Films</Button>
                 <Button onClick ={() => props.setPage("watchlist")}>Watch List</Button>
-                <Button onClick ={() => props.setPage("reccomendations")}>Reccomendations</Button>
+                <Button onClick ={() => props.setPage("recomendations")}>Recomendations</Button>
         </Container>
     )
 }
