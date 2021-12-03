@@ -2,7 +2,7 @@ function WatchListRendered(props){
     function watchedSwapButton(){
         const newWatchList = props.filmList.watchList.filter(film => {
             return film.title !== props.film.title})
-        props.setFilmList({watched:[...props.filmList.watchList,props.film], watchList:[...newWatchList]})
+        props.setFilmList({watched:[...props.filmList.watched,props.film], watchList:[...newWatchList]})
     }
     function deleteButton(){
         const newWatchList = props.filmList.watchList.filter((film) => {

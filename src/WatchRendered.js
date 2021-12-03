@@ -2,14 +2,13 @@ function WatchRendered(props){
     function watchListSwapButton(){
         const newWatched = props.filmList.watched.filter(film => {
             return film.title !== props.film.title})
-        props.setFilmList({watchList:[...props.filmList.watched,props.film], watched:[...newWatched]})
+        props.setFilmList({watchList:[...props.filmList.watchList,props.film], watched:[...newWatched]})
     }
     function deleteButton(){
         const newWatched = props.filmList.watched.filter((film) => {
             return film.title !== props.film.title})
         props.setFilmList({watched:[...newWatched], watchList:[...props.filmList.watchList]})
     }
-    console.log(props.film)
     return(
         <div>
             <img src={props.film.posterUrl} alt={props.film.overview}></img>
