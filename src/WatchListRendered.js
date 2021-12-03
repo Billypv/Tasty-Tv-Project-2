@@ -1,5 +1,4 @@
-import {Container, Row, Col, Button, Card} from 'react-bootstrap'
-import { findRenderedComponentWithType } from 'react-dom/test-utils'
+import {Row, Button, Card} from 'react-bootstrap'
 function WatchListRendered(props){
     function watchedSwapButton(){
         const newWatchList = props.filmList.watchList.filter(film => {

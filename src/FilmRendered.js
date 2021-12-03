@@ -1,4 +1,4 @@
-import {Container, Row, Col, Button, Card} from 'react-bootstrap'
+import {Row, Button, Card} from 'react-bootstrap'
 function FilmRendered(props){
     function watchedButton(){
         const newWatchList = props.filmList.watchList.filter(film => film.title !== props.film.title)

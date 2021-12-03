@@ -4,7 +4,6 @@ import Watched from './Watched'
 import Watchlist from './Watchlist'
 import Reccomendations from './Reccomendations'
 import Navbar from './Navbar'
-import Button from 'react-bootstrap/Button'
 import { Container } from 'react-bootstrap'
 
 function App() {

@@ -1,5 +1,5 @@
 import WatchListRendered from "./WatchListRendered"
-import {Container, Row, Col, Button, Card} from 'react-bootstrap'
+import {Container, Row, Button} from 'react-bootstrap'
 
 function Watchlist(props){
     return(

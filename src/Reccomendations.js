@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import FilmRendered from './FilmRendered'
-import {Container, Row, Col, Button, Card} from 'react-bootstrap'
+import {Container, Row} from 'react-bootstrap'
 
 function Reccomendations(props){
     const [filmGenre, setFilmGenre] = useState([{id:80}])

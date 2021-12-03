@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import SearchResults from './SearchResults'
-import {Container, Row, Col, Button, Card, Form} from 'react-bootstrap'
+import {Container, Form} from 'react-bootstrap'
 
 
 function Home(props){

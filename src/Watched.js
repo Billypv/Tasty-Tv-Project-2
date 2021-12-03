@@ -1,5 +1,5 @@
 import WatchRendered from "./WatchRendered"
-import {Container, Row, Col, Button, Card} from 'react-bootstrap'
+import {Container, Row, Button} from 'react-bootstrap'
 
 function Watched(props){
     return(
