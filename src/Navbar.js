@@ -1,11 +1,12 @@
+import {Container, Row, Col, Button, Card} from 'react-bootstrap'
 function Navbar(props){
     return(
-        <div>
-                <button onClick ={() => props.setPage("home")}>Home</button>
-                <button onClick ={() => props.setPage("watched")}>Watched Films</button>
-                <button onClick ={() => props.setPage("watchlist")}>Watch List</button>
-                <button onClick ={() => props.setPage("reccomendations")}>Reccomendations</button>
-        </div>
+        <Container >
+                <Button onClick ={() => props.setPage("home")}>Home</Button>
+                <Button onClick ={() => props.setPage("watched")}>Watched Films</Button>
+                <Button onClick ={() => props.setPage("watchlist")}>Watch List</Button>
+                <Button onClick ={() => props.setPage("reccomendations")}>Reccomendations</Button>
+        </Container>
     )
 }
 export default Navbar

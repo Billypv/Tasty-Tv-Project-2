@@ -1,16 +1,16 @@
 import {useState} from 'react'
 import SearchResults from './SearchResults'
+import {Container, Row, Col, Button, Card, Form} from 'react-bootstrap'
+
+
 function Home(props){
     const [search, setSearch] = useState("")
     return(
-        <div>
-            <header>
-                <button onClick={() => props.setPage("logon")}>Sign Up/Log In</button>
-            </header>
+        <Container>
             <h1>Tasty Tv</h1>
-            <input type="text" placeholder="Search" onChange={(e)=> setSearch(e.target.value)}></input>
+            <Form.Control type="text" placeholder="Search" onChange={(e)=> setSearch(e.target.value)}></Form.Control>
             <SearchResults setFilmList={props.setFilmList} search={search} filmList={props.filmList}/>
-        </div>
+        </Container>
     )
 }
 export default Home

@@ -1,3 +1,5 @@
+import {Container, Row, Col, Button, Card} from 'react-bootstrap'
+import { findRenderedComponentWithType } from 'react-dom/test-utils'
 function WatchListRendered(props){
     function watchedSwapButton(){
         const newWatchList = props.filmList.watchList.filter(film => {
@@ -11,14 +13,14 @@ function WatchListRendered(props){
     }
     console.log(props.film)
     return(
-        <div>
-            <img src={props.film.posterUrl} alt={props.film.overview}></img>
-            <p>{props.film.title}</p>
-            <div className="button-container">
-                <button onClick={()=> deleteButton()}>Remove from Watched</button>
-                <button onClick={()=> watchedSwapButton()}>Add to Watchlist</button>
-            </div>
-        </div>
+        <Card style={{ width: '15rem' }}>
+            <Card.Img src={props.film.posterUrl} alt={props.film.overview} width="100px"/>
+            <Card.Title>{props.film.title}</Card.Title>
+            <Row>
+                <Button onClick={()=> deleteButton()}>Remove from Watch List</Button>
+                <Button onClick={()=> watchedSwapButton()}>Add to Watched Films</Button>
+            </Row>
+        </Card>
     )
 }
 export default WatchListRendered

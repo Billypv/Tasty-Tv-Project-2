@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import { Container, Row } from 'react-bootstrap'
 import FilmRendered from './FilmRendered'
 function SearchResults(props){
     const [filmSearchResponse, setFilmSearchResponse] = useState({results:[]})
@@ -15,11 +16,13 @@ function SearchResults(props){
 
 
     return(
-        <div>
-            {filmSearchResponse.results.map((film) =>{
-                return <FilmRendered film={film} setFilmList={props.setFilmList} filmList={props.filmList}/>
+        <Container fluid >
+            <Row>
+            {filmSearchResponse.results.map((film, index) =>{
+                return <FilmRendered key={index} film={film} setFilmList={props.setFilmList} filmList={props.filmList}/>
             })}
-        </div>
+            </Row>
+        </Container>
     )
 }
 export default SearchResults

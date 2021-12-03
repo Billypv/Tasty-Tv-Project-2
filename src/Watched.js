@@ -1,14 +1,19 @@
 import WatchRendered from "./WatchRendered"
+import {Container, Row, Col, Button, Card} from 'react-bootstrap'
+
 function Watched(props){
     return(
-        <div>
+        <Container>
             <h1>Watched Films</h1>
-            <button>Delete all</button>
-            
-            {props.filmList.watched.map((film) =>{
-                return <WatchRendered film={film} filmList={props.filmList} setFilmList={props.setFilmList}/>
-            } )}
-        </div>
+            <Button onClick={()=>{
+                props.setFilmList({watched:[],watchList:[...props.filmList.watchList]})}
+            }>Delete all</Button>
+            <Row>
+                {props.filmList.watched.map((film,index) =>{
+                    return <WatchRendered key={index} film={film} filmList={props.filmList} setFilmList={props.setFilmList}/>
+                } )}
+            </Row>
+        </Container>
     )
 }
 export default Watched

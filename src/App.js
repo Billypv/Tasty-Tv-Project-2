@@ -1,11 +1,11 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import Home from './Home'
 import Watched from './Watched'
 import Watchlist from './Watchlist'
 import Reccomendations from './Reccomendations'
-import Logon from './Logon'
 import Navbar from './Navbar'
-
+import Button from 'react-bootstrap/Button'
+import { Container } from 'react-bootstrap'
 
 function App() {
 
@@ -21,16 +21,14 @@ function App() {
     } else if(page ==="watchlist"){
       return <Watchlist filmList={filmList}  setFilmList={setFilmList}/>
     } else if(page ==="reccomendations"){
-      return <Reccomendations />
-    } else if(page ==="logon"){
-      return <Logon />
+      return <Reccomendations setFilmList={setFilmList} filmList={filmList} page={page} />
     }
   }
   return (
-    <div>
+    <Container>
       <Navbar setPage={setPage}/>
       {getPage()}
-    </div>
+    </Container>
   );
 }
 
