@@ -10,7 +10,7 @@ function WatchListRendered(props){
             return film.title !== props.film.title})
         props.setFilmList({watched:[...props.filmList.watched], watchList:[...newWatchList]})
     }
-    console.log(props.film)
+
     return(
         <Card style={{ width: '15rem' }}>
             <Card.Img src={props.film.posterUrl} alt={props.film.overview} width="100px"/>
